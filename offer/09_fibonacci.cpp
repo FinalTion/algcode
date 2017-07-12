@@ -16,6 +16,5 @@ public:
             two = three;
         }
         return three;
-
     }
 };

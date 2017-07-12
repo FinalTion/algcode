@@ -10,13 +10,13 @@ public:
         while (rotateArray[index1] >= rotateArray[index2])
         {
             if (index2 - index1 == 1)
-           	{
+            {
                 indexMid = index2;
                 break;
             }
             indexMid = (index2 + index1)>>1;
             if (rotateArray[index1] == rotateArray[index2] && rotateArray[indexMid] == rotateArray[index1])
-                return search(rotateArray);
+                return search(rotateArray, index1, index2);
             if (rotateArray[indexMid] >= rotateArray[index1])
                 index1 = indexMid;
             if (rotateArray[indexMid] <= rotateArray[index2])
@@ -25,13 +25,12 @@ public:
         return rotateArray[indexMid];
     }
     
-    int search(vector<int> & v)
+    int search(vector<int> & v, int index1, int index2)
     {
-        int tmp = v[0];
-        for (int i = 0; i < v.size(); i++)
+        int tmp = v[index1];
+        for (int i = index1 + 1; i <= index2; i++)
         {
            tmp = tmp > v[i] ? v[i] : tmp;
         }
         return tmp;
-    }   
-};
+    } 

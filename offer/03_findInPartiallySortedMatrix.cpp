@@ -10,9 +10,8 @@ public:
         {
             int row = 0;
             int col = cols - 1;
-            while (row <rows && col >= 0)
+            while (row < rows && col >= 0)
             {
-                
                 if (array[row][col] == target)
                 {
                     found = true;

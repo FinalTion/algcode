@@ -5,8 +5,8 @@ public:
     {
         if (head != NULL)
          {
-            if(head->next != NULL)
-                printListFromTailToHead(head->next);
+
+            printListFromTailToHead(head->next);
             result.push_back(head->val);   
         }
         return result;

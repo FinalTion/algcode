@@ -1,16 +1,16 @@
 //替换空格
 class Solution {
 public:
-	void replaceSpace(char *str,int length) 
+    void replaceSpace(char *str, int length) 
     {
-		if (str == NULL || length <= 0)
+        if (str == NULL || length <= 0)
             return;
         int origLen = 0;
         int numOfBlank = 0;
         int i = 0;
         while (str[i] != '\0')
         {
-        	origLen++;
+            origLen++;
             if (str[i] == ' ')
                 numOfBlank++;
             i++;
@@ -21,7 +21,7 @@ public:
             return;
         int indexOrig = origLen;
         int indexNew = newLen;
-        while (indexOrig >= 0 && indexNew > indexOrig)
+        while (indexOrig >= 0)
         {
             if (str[indexOrig] == ' ')
             {
@@ -35,5 +35,5 @@ public:
             }
             indexOrig--;
         }
-	}
+    }
 };

@@ -3,7 +3,7 @@ class Solution {
 public:
     TreeNode* reConstructBinaryTree(vector<int> pre,vector<int> vin) 
     {
-        if(pre.size()==0 || vin.size() == 0)
+        if(pre.empty() || vin.empty())
             return NULL;
      	TreeNode *root=new TreeNode(pre[0]);
         int i=0;
